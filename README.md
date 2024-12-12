@@ -9,10 +9,10 @@ Run the following commands to install the necessary dependencies and Docker imag
 
 ```bash
 
-## Install Kafka and Zookeeper using Docker
+# Install Kafka and Zookeeper using Docker
 docker-compose up -d
 
-You may need to install other dependencies to interact with Kafka from your application
+# You may need to install other dependencies to interact with Kafka from your application
 pip install kafka-python
 
 ```
