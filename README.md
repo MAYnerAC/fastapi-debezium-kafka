@@ -80,10 +80,14 @@ After the services are running, you can use the Python consumer to start capturi
 Once the CDC connector is running and changes are being captured by Kafka, here's an example of a change captured when a record is inserted into the users table in MySQL.
 
 ### Request (Insert record into MySQL):
-```sql INSERT INTO users (id, name) VALUES (1, 'John Doe'); ```
+```sql
+INSERT INTO users (id, name) VALUES (1, 'John Doe');
+```
 
 ### Response (Captured by Kafka/Consumed by Python):
-```json { "before": null, "after": { "id": 1, "name": "John Doe" }, "source": { "version": "1.4.0.Final", "connector": "mysql", "name": "dbserver1", "server_id": 184054, "ts_sec": 1604233475 } } ```
+```json
+{ "before": null, "after": { "id": 1, "name": "John Doe" }, "source": { "version": "1.4.0.Final", "connector": "mysql", "name": "dbserver1", "server_id": 184054, "ts_sec": 1604233475 } }
+```
 
 ## Conclusion
 Building a real-time data capture application with Debezium and Kafka enables powerful streaming and event-driven architectures. In this tutorial, we’ve demonstrated how to capture database changes in real-time and stream them for further processing. Using Debezium with Kafka provides a reliable and scalable solution for Change Data Capture (CDC) in modern applications.
